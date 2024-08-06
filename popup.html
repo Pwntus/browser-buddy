@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BrowserBuddy</title>
+    <style>
+      body,
+      html {
+        width: 300px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #63c7ec;
+      }
+      #eyes {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .pupil {
+        transition: cx 0.5s ease-out, cy 0.5s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <svg id="eyes" width="200" height="100" viewBox="0 0 200 100">
+      <g id="leftEye">
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          fill="white"
+          stroke="black"
+          stroke-width="2"
+        />
+        <circle
+          id="leftPupil"
+          class="pupil"
+          cx="50"
+          cy="50"
+          r="20"
+          fill="black"
+        />
+      </g>
+      <g id="rightEye">
+        <circle
+          cx="150"
+          cy="50"
+          r="40"
+          fill="white"
+          stroke="black"
+          stroke-width="2"
+        />
+        <circle
+          id="rightPupil"
+          class="pupil"
+          cx="150"
+          cy="50"
+          r="20"
+          fill="black"
+        />
+      </g>
+    </svg>
+
+    <div style="display: none">
+      <input
+        value=""
+        type="password"
+        id="openAIToken"
+        placeholder="Enter OpenAI API Token"
+      />
+      <input
+        value=""
+        type="password"
+        id="elevenLabsToken"
+        placeholder="Enter ElevenLabs API Token"
+      />
+      <button id="saveTokens">Save Tokens</button>
+      <hr />
+      <button id="analyzeText">Analyze Page Text</button>
+      <button id="analyzeVisual">Analyze Visual Content</button>
+      <div id="result"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
