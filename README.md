@@ -4,6 +4,8 @@
 
 A Chrome extension that will create a browser buddy that comments on your current web page.
 
+https://x.com/PontusAurdal/status/1820799122821050566
+
 ## How to Run
 
 This will only work in Google Chrome!
